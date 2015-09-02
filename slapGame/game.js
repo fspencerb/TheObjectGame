@@ -4,7 +4,6 @@ document.getElementById("name").innerText = firstName;
 
 function hit() {
 	hits+=1;
-	/*hitcount();*/
 }
 
 function update() {
@@ -31,35 +30,46 @@ var player =
 		showHide("slapshow");
 		this.health-=1;
 		this.hits+=1;
+		this.knockedOut();
+		this.sickPerson();
 		update();
+		
 	},
 	punch:function() {
 		showHide("punchshow");
 		this.health-=5;
 		this.hits+=1;
+		this.knockedOut();
+		this.sickPerson();
 		update();
 	},
 	kick:function(){
 		showHide("kickshow");
 		this.health-=10;
 		this.hits+=1;
+		this.knockedOut();
+		this.sickPerson();
 		update();
 	},
 	reset:function() {
-		this.health = this.health + 100;
-			if (this.health > 100) {
+			if (this.health < 100) {
 			this.hits = 0;
 			this.health = 100;
 			}		
 		update();
-	}
+	},
 	knockedOut:function() {
-		if (this.health < 0)
-		   this.health = 0;
-		if (this.health = 0)
-		   prompt("You KO'd " + firstName + "! Now did you really want to go and do that?");
+		if (this.health <= 0) {
+			this.health = 0;
+			prompt("You KO'd " + firstName + "! Now did you really want to go and do that?" <br/>
+				<img src="/image/humbledstickman.jpg">);
+		} 
+	},
+	sickPerson:function() {
+		if (this.health = 0) {
+			prompt("What are you?! SICK and TWISTED?! Messing with a person while they're down and out? Just refill their health and go at it again. Or refresh the page and put in someone else's name.")
+		}
 	}
-
 }
 
 update();
