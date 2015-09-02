@@ -1,3 +1,27 @@
 .stickimg {
 	height:200px;
 }
+
+#name{
+	color: blue;
+}
+
+#hits{
+	color: red;
+}
+
+#hp{
+	color: green;
+}
+
+.panel-default .panel-heading{
+	background-color: black;
+}
+
+.panel-footer{
+	background-color: black;
+}
+
+.panel-body{
+	background-color: darkslategrey;
+}

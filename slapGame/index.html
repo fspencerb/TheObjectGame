@@ -9,15 +9,19 @@
   <body>
     <div class="panel panel-default ">
       <div class="panel-heading ">
-        <span id="hp">Health</span>
-        <h3 class="panel-title ">Panel title</h3>
+         <span id="name">Name</span><br>
+        <span id="hp" onchange="update()">Health</span><br>
+        <span id="hits">Hits</span>
+        <h3 class="panel-title "></h3>
       </div>
       <div class="panel-body ">
-        <div><img class="stickimg" src="image/stickfigure.png"></div>
-        Panel content
+        <div><img class="stickimg" src="image/teemo.jpg"></div>
       </div>
       <div class="panel-footer ">
         <button class="btn btn-primary" onClick="slap()">Slap</button>
+        <button class="btn btn-primary" onClick="punch()">Punch</button>
+        <button class="btn btn-primary" onClick="kick()">Kick</button>
+                     
       </div>
     </div>
      <script src="game.js "></script>
