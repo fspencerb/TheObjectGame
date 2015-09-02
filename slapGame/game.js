@@ -1,4 +1,4 @@
-var health=100;
+var health= 100;
 var name = "Teemo";
 var hits = 0;
 
@@ -26,11 +26,11 @@ function kick()
 function update()
 {
 	var hp = document.getElementById('hp');
-	hp.innerText = "Health: " + health;
+	hp.innerHTML = health.toString();
 	var text = document.getElementById('name');
-	text.innerText = "Name: " + name;
+	text.innerText = name;
 	var hit = document.getElementById('hits');
-	hit.innerText = "Hits: " + hits;
+	hit.innerHTML = hits.toString();
 	
 	if(health <= 0)
 	{
