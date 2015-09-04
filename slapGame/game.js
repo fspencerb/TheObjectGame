@@ -40,7 +40,7 @@ function update() {
 	var hp = document.getElementById('hp');
 	hp.innerHTML = player.health.toString();
 	var text = document.getElementById('name');
-	text.innerHTML = name;
+	text.innerHTML = player.name;
 	var hit = document.getElementById('hits');
 	hit.innerHTML = player.hits.toString();
 
