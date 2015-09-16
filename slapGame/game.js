@@ -36,7 +36,10 @@ var player =
 		this.health-=1;
 		this.hits+=1;
 		this.knockedOut();
-		this.sickPerson();
+		if (this.health <= 0) {
+			this.health = 0;
+			this.sickPerson();
+		}
 		update();
 	},
 	punch:function() {
@@ -44,19 +47,26 @@ var player =
 		this.health-=5;
 		this.hits+=1;
 		this.knockedOut();
-		this.sickPerson();
+		if (this.health <= 0) {
+			this.health = 0;
+			this.sickPerson();
+		}
 		update();
 	},
 	kick:function(){
 		showHide("kickshow");
 		this.health-=10;
 		this.hits+=1;
-		this.knockedOut();
-		this.sickPerson();
+		if (this.health <= 0) {
+			this.health = 0;
+			this.knockedOut();
+			this.sickPerson();
+			
+		}
 		update();
 	},
 	reset:function() {
-			if (this.health < 100) {
+		if (this.health < 100) {
 			this.hits = 0;
 			this.health = 100;
 			}		
